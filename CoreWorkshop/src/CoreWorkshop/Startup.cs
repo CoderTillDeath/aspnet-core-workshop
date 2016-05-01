@@ -26,6 +26,7 @@ namespace CoreWorkshop
 
             app.Run(async (context) =>
             {
+                throw new Exception();
                 await context.Response.WriteAsync("Hello World!");
             });
         }
