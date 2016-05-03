@@ -20,5 +20,10 @@ namespace CoreWorkshop.Controllers
         {
             return View();
         }
+
+        public string getValue(int id)
+        {
+            return $"Value: {id}, Valid: {ModelState.IsValid}";
+        }
     }
 }
