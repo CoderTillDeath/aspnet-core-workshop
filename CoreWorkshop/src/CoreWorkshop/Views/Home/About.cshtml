@@ -9,6 +9,10 @@
 <body>
     <h1>Home Controller About</h1>
     <p markdown> [docs](https://docs.asp.net)</p>
+    @await FlushAsync()
+    <cache>
+        @{ System.Threading.Thread.Sleep(3000);}
+    </cache>
     <markdown>*Hello* **World**</markdown>
 </body>
 </html>
