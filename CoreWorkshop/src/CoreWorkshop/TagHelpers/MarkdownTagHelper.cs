@@ -8,7 +8,8 @@ using Microsoft.AspNet.Razor.TagHelpers;
 namespace CoreWorkshop.TagHelpers
 {
     // You may need to install the Microsoft.AspNet.Razor.Runtime package into your project
-    // [HtmlTargetElement("tag-name")]  // Manually set tag name
+    [HtmlTargetElement("markdown")]  // Manually set tag name
+    [HtmlTargetElement("p", Attributes = "markdown")]
     public class MarkdownTagHelper : TagHelper
     {
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
