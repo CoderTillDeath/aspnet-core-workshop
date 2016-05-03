@@ -30,7 +30,10 @@ namespace CoreWorkshop
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "Default",
+                    name: "oops", 
+                    template: "{controller=Home}/{action=About}");
+                routes.MapRoute(
+                    name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
