@@ -1,8 +1,8 @@
-﻿using EFGetStarted.AspNet5.NewDb.Models;
+﻿using CoreWorkshop.Models;
 using Microsoft.AspNet.Mvc;
 using System.Linq;
 
-namespace EFGetStarted.AspNet5.NewDb.Controllers
+namespace CoreWorkshop.Controllers
 {
     public class BlogsController : Controller
     {
