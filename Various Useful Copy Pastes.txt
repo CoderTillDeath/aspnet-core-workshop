@@ -1,0 +1,5 @@
+var connection = @"Server=(localdb)\mssqllocaldb;Database=CoreWorkshop;Trusted_Connection=True;";
+
+services.AddEntityFramework()
+    .AddSqlServer()
+    .AddDbContext<BloggingContext>(options => options.UseSqlServer(connection));
