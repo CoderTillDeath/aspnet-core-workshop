@@ -2,8 +2,6 @@
 
 ---
 
-## Overview ##
-
 ### Objectives ###
 In this workshop, you will:
 
