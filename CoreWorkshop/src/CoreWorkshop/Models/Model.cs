@@ -6,7 +6,7 @@ using Microsoft.Data.Entity;
 
 namespace CoreWorkshop.Models
 {
-    public class BloggingContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Post> Posts { get; set; }
@@ -17,6 +17,8 @@ namespace CoreWorkshop.Models
             modelBuilder.Entity<Blog>()
                 .Property(b => b.Url)
                 .IsRequired();
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 
