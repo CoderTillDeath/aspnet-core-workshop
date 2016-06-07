@@ -6,9 +6,9 @@ namespace CoreWorkshop.Controllers
 {
     public class BlogsController : Controller
     {
-        private BloggingContext _context;
+        private ApplicationDbContext _context;
 
-        public BlogsController(BloggingContext context)
+        public BlogsController(ApplicationDbContext context)
         {
             _context = context;
         }

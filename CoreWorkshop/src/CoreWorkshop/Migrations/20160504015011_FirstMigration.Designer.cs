@@ -7,7 +7,7 @@ using CoreWorkshop.Models;
 
 namespace CoreWorkshop.Migrations
 {
-    [DbContext(typeof(BloggingContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20160504015011_FirstMigration")]
     partial class FirstMigration
     {
