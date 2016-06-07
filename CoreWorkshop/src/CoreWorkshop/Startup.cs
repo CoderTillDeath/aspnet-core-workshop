@@ -8,6 +8,7 @@ using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Data.Entity;
 using CoreWorkshop.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace CoreWorkshop
 {
@@ -21,7 +22,11 @@ namespace CoreWorkshop
 
             services.AddEntityFramework()
                 .AddSqlServer()
-                .AddDbContext<BloggingContext>(options => options.UseSqlServer(connection));
+                .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
 
             services.AddMvc();
         }
@@ -34,6 +39,8 @@ namespace CoreWorkshop
             app.UseDeveloperExceptionPage();
 
             app.UseStaticFiles();
+
+            app.UseIdentity();
 
             app.UseMvc(routes =>
             {
